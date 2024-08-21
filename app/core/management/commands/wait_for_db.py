@@ -7,8 +7,9 @@ from django.db.utils import OperationalError
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        self.stdout.write("waiting for database...")
+        self.stdout.write("waiting  for database...")
         db_up = False
+
         while db_up is False:
             try:
                 self.check(databases=["default"])
