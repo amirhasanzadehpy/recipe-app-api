@@ -17,7 +17,7 @@ jobs:
           uses: actions/checkout@v2
         - name: Test
           env:
-            DB_HOST: db
+            DB_HOST: localhost
             DB_USER: ${{ secrets.DB_USER }}
             DB_PASS: ${{ secrets.DB_PASS }}
             DB_NAME: devdb
